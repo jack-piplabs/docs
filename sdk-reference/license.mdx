@@ -97,8 +97,8 @@ Parameters:
 
 - `request.licensorIpId`: The licensor IP ID.
 - `request.licenseTermsId`: The ID of the license terms within the license template.
-- `request.maxMintingFee`: The maximum minting fee to be paid when minting a license.
-- `request.maxRevenueShare`: The maximum revenue share to be paid when minting a license.
+- `request.maxMintingFee`: \[Optional] The maximum minting fee to be paid when minting a license.
+- `request.maxRevenueShare`: \[Optional] The maximum revenue share to be paid when minting a license.
 - `request.amount`: \[Optional] The amount of license tokens to mint.
 - `request.receiver`: \[Optional] The address of the receiver.
 - `request.licenseTemplate`: \[Optional] The address of the license template.
@@ -111,8 +111,6 @@ const response = await client.license.mintLicenseTokens({
   licensorIpId: "0xC92EC2f4c86458AFee7DD9EB5d8c57920BfCD0Ba",
   receiver: "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955", // optional
   amount: 1,
-  maxMintingFee: BigInt(0), // disabled
-  maxRevenueShare: 100, // default
 });
 
 console.log(
